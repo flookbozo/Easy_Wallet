@@ -20,7 +20,7 @@ public class LedgerRepository {
 
     public  void insertLedger(LedgerItem item, InsertCallback callback){
         InsertTask insertTask = new InsertTask(mContext, callback);
-        insertTask.execute();
+        insertTask.execute(item);
     }
 
     private static class GetTask extends AsyncTask<Void, Void, List<LedgerItem>> {
